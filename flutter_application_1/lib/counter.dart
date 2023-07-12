@@ -13,7 +13,12 @@ class _MyCounterState extends State<MyCounter> {
     setState(() {
       Counter++;
     });
+  }
 
+  decrement() {
+    setState(() {
+      Counter--;
+    });
   }
 
   @override
@@ -22,9 +27,28 @@ class _MyCounterState extends State<MyCounter> {
       appBar: AppBar(
         title: Center(child: Text("Counter App")),
       ),
-      body: Text(
-        "Hello Everyone",
-        style: TextStyle(fontSize: 30),
+      body: Center(
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+            ),
+            Text(
+              "Counter",
+              style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blueAccent),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+            ),
+            Text(
+              "$Counter",
+              style: TextStyle(fontSize: 32),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,8 +62,8 @@ class _MyCounterState extends State<MyCounter> {
           FloatingActionButton(
             onPressed: () {
               decrement();
-              child: Icon(Icons.minimize),
             },
+            child: Icon(Icons.minimize),
           ),
         ],
       ),
