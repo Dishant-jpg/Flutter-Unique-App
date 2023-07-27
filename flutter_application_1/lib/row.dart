@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+void main(List<String> args) {
+  runApp(MyRow());
+}
+
 class MyRow extends StatefulWidget {
   const MyRow({super.key});
 
@@ -16,7 +20,7 @@ class _MyRowState extends State<MyRow> {
         body: Container(
           padding: EdgeInsets.only(top: 100),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
                 children: [
