@@ -224,13 +224,6 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-      Child: Column(
-        children: [
-          Container(
-            child: Image.asset('assets/images/first.jpg'),
-          ),
-        ],
-      ),
     );
   }
 }
