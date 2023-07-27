@@ -8,6 +8,7 @@ class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter App',
       home: HomeScreen(),
       theme: ThemeData(),
@@ -23,105 +24,215 @@ class HomeScreen extends StatelessWidget {
         title: Text("Columns App"),
         centerTitle: true,
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(color: Colors.deepOrangeAccent),
-                child: Center(
-                  child: Text(
-                    "One",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(width: 30),
+            Padding(
+              padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            ),
+            Container(
+              height: 50,
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Discover",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 245, 255, 64)),
-                child: Center(
-                  child: Text(
-                    "Two",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 120,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Animation",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 137, 255, 64)),
-                child: Center(
-                  child: Text(
-                    "Three",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Branding",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                    color: const Color.fromARGB(255, 64, 255, 249)),
-                child: Center(
-                  child: Text(
-                    "Four",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 120,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Illustration",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration:
-                    BoxDecoration(color: Color.fromARGB(255, 64, 115, 255)),
-                child: Center(
-                  child: Text(
-                    "Five",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Mobile",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration:
-                    BoxDecoration(color: Color.fromARGB(255, 156, 64, 255)),
-                child: Center(
-                  child: Text(
-                    "Six",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Print",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                width: 200,
-                decoration:
-                    BoxDecoration(color: Color.fromARGB(255, 214, 64, 255)),
-                child: Center(
-                  child: Text(
-                    "Seven",
-                    style: TextStyle(color: Colors.white, fontSize: 30),
-                  ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 160,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Product Design",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
                 ),
               ),
-            ],
-          ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 160,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Typography",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
+                ),
+              ),
+            ),
+            SizedBox(width: 30),
+            Container(
+              height: 50,
+              width: 160,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  color: Colors.blueAccent,
+                  boxShadow: [
+                    BoxShadow(
+                        color: const Color.fromARGB(66, 235, 235, 235),
+                        spreadRadius: 2,
+                        blurRadius: 5)
+                  ]),
+              child: Center(
+                child: Text(
+                  "Web Design",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 20),
+                ),
+              ),
+            ),
+          ],
         ),
+      ),
+      Child: Column(
+        children: [
+          Container(
+            child: Image.asset('assets/images/first.jpg'),
+          ),
+        ],
       ),
     );
   }
 }
+
+// Image.asset('assets/images/first.jpg')
