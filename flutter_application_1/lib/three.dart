@@ -23,7 +23,8 @@ class HomeScreen extends StatelessWidget {
         title: Text("Columns App"),
         centerTitle: true,
       ),
-      body: Center(
+      body: 
+      Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

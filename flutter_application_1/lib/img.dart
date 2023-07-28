@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(MyFirstApp());
+  runApp(MyApp());
 }
 
-class MyFirstApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter App',
+      title: "My App",
       home: HomeScreen(),
       theme: ThemeData(),
     );
@@ -21,15 +21,66 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Columns App"),
+        title: Text("Image App"),
+        backgroundColor: Colors.deepOrange,
         centerTitle: true,
       ),
+//       body: Container(
+//           height: 200,
+//           child: ListView(
+//             scrollDirection: Axis.horizontal,
+//             children: [
+//               buildcard(),
+//               SizedBox(
+//                 width: 20,
+//               ),
+//               buildcard(),
+//               SizedBox(
+//                 width: 20,
+//               ),
+//               buildcard(),
+//               SizedBox(
+//                 width: 20,
+//               ),
+//               buildcard(),
+//               SizedBox(
+//                 width: 20,
+//               ),
+//               buildcard(),
+//               SizedBox(
+//                 width: 20,
+//               ),
+//             ],
+//           )),
+//     );
+//   }
+// }
+
+// Widget buildcard() => Container(
+//       height: 200,
+//       width: 200,
+//       color: Colors.deepOrange,
+//       child: Column(
+//         children: [
+//           Image.asset("assets/images/Shoe2.png"),
+//           const SizedBox(height: 4),
+//           Text(
+//             'Shoe 1',
+//             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+//           ),
+//           Text(
+//             '\$100',
+//             style: TextStyle(fontWeight: FontWeight.w700),
+//           ),
+//         ],
+//       ),
+//     );
+
       body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Row(
               children: [
                 SizedBox(width: 30),
@@ -232,42 +283,138 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 30),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Column(
-                children: [
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Image.asset('assets/images/first.jpg'),
-                  ),
-                  SizedBox(height: 30),
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Image.asset('assets/images/first.png'),
-                  ),
-                  SizedBox(height: 30),
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Image.asset('assets/images/first.png'),
-                  ),
-                  SizedBox(height: 30),
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Image.asset('assets/images/first.png'),
-                  ),
-                  SizedBox(height: 30),
-                  Container(
-                    height: 200,
-                    width: 400,
-                    child: Image.asset('assets/images/first.png'),
-                  ),
-                  SizedBox(height: 30),
-                ],
+            Container(
+              height: 800,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/first.png",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    // image2
+
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/5G.webp",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+                    // image3
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/mountain.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+                    // image4
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/first.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/first.png",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    // image2
+
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/5G.webp",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+                    // image3
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/mountain.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(height: 20),
+                    // image4
+                    Center(
+                      child: Container(
+                        height: 380,
+                        width: 380,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Image.asset(
+                          "assets/images/first.jpg",
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ],
