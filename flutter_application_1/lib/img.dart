@@ -59,7 +59,10 @@ class HomeScreen extends StatelessWidget {
 // Widget buildcard() => Container(
 //       height: 200,
 //       width: 200,
-//       color: Colors.deepOrange,
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(20),
+//         color: Colors.deepOrange,
+//       ),
 //       child: Column(
 //         children: [
 //           Image.asset("assets/images/Shoe2.png"),
@@ -77,6 +80,7 @@ class HomeScreen extends StatelessWidget {
 //     );
 
       body: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
