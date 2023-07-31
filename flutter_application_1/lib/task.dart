@@ -26,18 +26,42 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Row(children: [
         //1 Row
-        Container(
-          height: 200,
-          width: 300,
-          child: Image.asset("assets/images/first.jpg"),
+        Column(
+          children: [
+            Row(
+              children: [
+                //1
+                Container(
+                  height: 100,
+                  width: 180,
+                  decoration: BoxDecoration(),
+                  color: Color.fromRGBO(89, 99, 107, 1),
+                  child: Text("Strawberry Pavlova"),
+                ),
+                //2
+                Container(),
+                //3
+                Container(),
+                //4
+                Container(),
+              ],
+            ),
+          ],
         ),
-        SizedBox(width: 20),
-        Container(
-          height: 1000,
-          width: 800,
-          child: Image.asset("assets/images/cake.jpg"),
+        Column(
+          children: [
+            Container(
+                alignment: AlignmentDirectional.bottomEnd,
+                height: 650,
+                width: 1050,
+                child: Image.asset("assets/images/cake.jpg"))
+          ],
         ),
       ]),
     );
   }
 }
+
+
+
+// Container(height: 1307, width: 1536, color: Colors.amber),
