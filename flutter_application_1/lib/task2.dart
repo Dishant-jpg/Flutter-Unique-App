@@ -73,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                           height: 30,
                           width: 30,
                           child: Image.network(
-                              "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/A_Black_Star.png/883px-A_Black_Star.png"),
+                              "https://upload.wikimedia.org/wikipedia/commonsthumb/b/bf/A_Black_Star.png/883px-A_Black_Star.png"),
                         ),
                         SizedBox(width: 5),
                         Container(
