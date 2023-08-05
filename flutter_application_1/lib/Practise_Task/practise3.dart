@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,16 +39,20 @@ class HomeScreen extends StatelessWidget {
                     width: 370,
                     child: TextField(
                         decoration: InputDecoration(
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(15)),
-                            label: Text(
-                              "Find Wallapar..",
-                              style: TextStyle(
-                                  color: Colors.black45,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                            suffixIcon: Icon(Icons.search)),
+                          prefixIcon: Icon(
+                            FontAwesomeIcons.a,
+                            color: Colors.amber,
+                          ),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                          label: Text(
+                            "Find Wallapar..",
+                            style: TextStyle(
+                                color: Colors.black45,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
                         keyboardType: TextInputType.visiblePassword,
                         onChanged: (password) {
                           print(password);
