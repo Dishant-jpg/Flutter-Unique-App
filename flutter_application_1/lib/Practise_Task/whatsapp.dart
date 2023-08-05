@@ -2154,9 +2154,9 @@ class HomeScreen extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 1)),
+                  Padding(padding: EdgeInsets.only(top: 160)),
                   Container(
-                      height: double.infinity,
+                      height: 1000,
                       width: double.infinity,
                       color: Color.fromARGB(255, 255, 255, 255),
                       child: ListView.builder(
