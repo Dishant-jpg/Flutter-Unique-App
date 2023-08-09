@@ -17,10 +17,10 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "flutter_wrapper_plugin::@2bb09fbb03a373b2cb34"
+			"id" : "flutter_wrapper_app::@2bb09fbb03a373b2cb34"
 		},
 		{
-			"id" : "flutter_wrapper_app::@2bb09fbb03a373b2cb34"
+			"id" : "flutter_wrapper_plugin::@2bb09fbb03a373b2cb34"
 		},
 		{
 			"id" : "flutter_application_1::@056c4f61b0156d1d9b06"
