@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Practise_Task/Plant_Tree/Second_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -114,20 +115,26 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(padding: EdgeInsets.only(top: 20)),
-            Container(
-              height: 60,
-              width: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(35),
-                color: Color.fromARGB(255, 53, 177, 96),
-              ),
-              child: Center(
-                child: Text(
-                  "GO",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => Mytree()));
+              },
+              child: Container(
+                height: 60,
+                width: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(35),
+                  color: Color.fromARGB(255, 53, 177, 96),
+                ),
+                child: Center(
+                  child: Text(
+                    "GO",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             )

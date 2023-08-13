@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyCounter extends StatefulWidget {
   const MyCounter({super.key});
@@ -57,13 +58,13 @@ class _MyCounterState extends State<MyCounter> {
             onPressed: () {
               increment();
             },
-            child: Icon(Icons.add),
+            child: Icon(FontAwesomeIcons.add),
           ),
           FloatingActionButton(
             onPressed: () {
               decrement();
             },
-            child: Icon(Icons.minimize),
+            child: Icon(FontAwesomeIcons.minus),
           ),
         ],
       ),

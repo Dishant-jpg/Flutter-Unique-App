@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Mycolor extends StatefulWidget {
-  const Mycolor({super.key});
+class Mycolor5 extends StatefulWidget {
+  const Mycolor5({super.key});
 
   @override
-  State<Mycolor> createState() => _MycolorState();
+  State<Mycolor5> createState() => _MycolorState();
 }
 
-class _MycolorState extends State<Mycolor> {
+class _MycolorState extends State<Mycolor5> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
