@@ -26,7 +26,6 @@ class _SignupPageState extends State<SignupPage> {
             .createUserWithEmailAndPassword(email: emails, password: passwords)
             .then((value) {
           log('User Created');
-          return null;
         });
       } on FirebaseAuthException catch (ex) {
         log(ex.code.toString());

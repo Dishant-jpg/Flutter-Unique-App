@@ -1,5 +1,7 @@
 import 'dart:developer';
+
 import 'package:database_manage/dbhelper.dart';
+import 'package:database_manage/fetch.dart';
 import 'package:database_manage/uihelper.dart';
 import 'package:flutter/material.dart';
 
@@ -17,33 +19,37 @@ class _HomePageState extends State<HomePage> {
   void addData(String title, String description) async {
     dbhelper().addData(title, description);
     log("Data Inserted");
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => fetch_data()));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 300),
-            child: Container(
-              child: uihelper.CustomTextfield(title, "Title", Icons.title),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 300),
+              child: Container(
+                child: uihelper.CustomTextfield(title, "Title", Icons.title),
+              ),
             ),
-          ),
-          Container(
-            child: uihelper.CustomTextfield(
-                description, "Description", Icons.description),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-              onPressed: () async {
-                addData(title.text.toString(), description.text.toString());
-              },
-              child: const Text("Save"))
-        ],
+            Container(
+              child: uihelper.CustomTextfield(
+                  description, "Description", Icons.description),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () async {
+                  addData(title.text.toString(), description.text.toString());
+                },
+                child: const Text("Save"))
+          ],
+        ),
       ),
     );
   }

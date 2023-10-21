@@ -1,4 +1,5 @@
 import 'package:database_manage/dbhelper.dart';
+import 'package:database_manage/update.dart';
 import 'package:flutter/material.dart';
 
 class fetch_data extends StatefulWidget {
@@ -13,6 +14,7 @@ class _fetch_dataState extends State<fetch_data> {
   @override
   void initState() {
     super.initState();
+    getAllData();
   }
 
   void getAllData() async {
@@ -24,7 +26,7 @@ class _fetch_dataState extends State<fetch_data> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fetch File"),
+        title: const Text("Fetch File"),
         centerTitle: true,
       ),
       body: ListView.builder(
@@ -35,6 +37,12 @@ class _fetch_dataState extends State<fetch_data> {
             ),
             title: Text("${arrnotes[index][dbhelper().columndescription]}"),
             subtitle: Text("${arrnotes[index][dbhelper().columndescription]}"),
+            trailing: IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => update_data()));
+                },
+                icon: Icon(Icons.edit)),
           );
         },
         itemCount: arrnotes.length,
