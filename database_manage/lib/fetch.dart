@@ -40,6 +40,10 @@ class _fetch_dataState extends State<fetch_data> {
             trailing: IconButton(
                 onPressed: () {
                   Navigator.push(context,
+
+
+
+                  
                       MaterialPageRoute(builder: (context) => update_data()));
                 },
                 icon: Icon(Icons.edit)),
